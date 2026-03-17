@@ -1,0 +1,19 @@
+public class TestaAcademico {
+    public static void main(String[] args) {
+        Aluno a1 = new Aluno(1, "Thiago", "12345", "Engenharia");
+        Aluno a2 = new Aluno(2, "Mariana", "67890", "Sistemas");
+
+        Disciplina pOO = new Disciplina(101, "Programação Orientada a Objetos", "Dr. Java");
+
+        pOO.matricularAluno(a1);
+        pOO.matricularAluno(a2);
+
+        pOO.criarAvaliacao(1, "Prova Semestral");
+
+        pOO.getAvaliacao(0).adicionarQuestao(1, "O que é polimorfismo?", 3.5f);
+        pOO.getAvaliacao(0).adicionarQuestao(2, "Diferença entre Classe e Objeto", 3.5f);
+        pOO.getAvaliacao(0).adicionarQuestao(3, "Explique Herança", 3.0f);
+
+        System.out.println(pOO.toString());
+    }
+}
